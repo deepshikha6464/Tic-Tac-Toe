@@ -1,18 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity">
-
+    <!--player 1-->
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_margin="10dp"
+        android:gravity="left"
+        android:text="Player One"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+    <!--player 2-->
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:text="Player Two"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/playerTwoCount"
+        android:layout_below="@id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_alignParentRight="true"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+
+    <TextView
+        android:id="@+id/playerOneCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginLeft="50dp"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+
+    <!--    winnig text -->
+    <TextView
+        android:id="@+id/winningStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playerOneCount"
+        android:backgroundTint="#827370"
+        android:text="Player One is winning "
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        />
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_below="@id/winningStatus"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:backgroundTint="#827370"/>
+
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:backgroundTint="#827370"/>
+
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:backgroundTint="#827370"
+                android:text="X" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:backgroundTint="#827370" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:backgroundTint="#827370" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:backgroundTint="#827370"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:backgroundTint="#827370" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:backgroundTint="#827370" />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:backgroundTint="#827370" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="#F83711"
+        android:text="Reset"
+        android:layout_alignParentBottom="true"
+        android:textSize="15sp"/>
+</RelativeLayout>
+
