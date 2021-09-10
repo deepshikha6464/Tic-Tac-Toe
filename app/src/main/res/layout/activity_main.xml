@@ -5,12 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".MainActivity">
-    <!--player 1-->
+     <!--player 1-->
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#7EE556"
         android:gravity="left"
         android:text="Player One"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
@@ -20,7 +24,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="#FA0AD5"
+        android:layout_marginBottom="10dp"
         android:text="Player Two"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -51,12 +59,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/playerOneCount"
-        android:backgroundTint="#827370"
-        android:text="Player One is winning "
         android:layout_centerHorizontal="true"
+        android:backgroundTint="#827370"
         android:padding="10dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
 
 
@@ -80,6 +86,7 @@
                 android:layout_height="110dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="BtnClicked"
                 android:backgroundTint="#827370"/>
 
 
@@ -89,6 +96,8 @@
                 android:layout_height="110dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="BtnClicked"
+
                 android:backgroundTint="#827370"/>
 
 
@@ -97,9 +106,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="110dp"
                 android:layout_weight="1"
+                android:onClick="BtnClicked"
+
                 android:layout_margin="5dp"
                 android:backgroundTint="#827370"
-                android:text="X" />
+               />
         </LinearLayout>
 
         <LinearLayout
@@ -113,6 +124,8 @@
                 android:layout_height="110dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="BtnClicked"
+
                 android:backgroundTint="#827370" />
 
             <Button
@@ -121,6 +134,8 @@
                 android:layout_height="110dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="BtnClicked"
+
                 android:backgroundTint="#827370" />
 
             <Button
@@ -129,6 +144,8 @@
                 android:layout_height="110dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="BtnClicked"
+
                 android:backgroundTint="#827370"/>
         </LinearLayout>
 
@@ -143,6 +160,8 @@
                 android:layout_height="110dp"
                 android:layout_weight="1"
                 android:layout_margin="5dp"
+                android:onClick="BtnClicked"
+
                 android:backgroundTint="#827370" />
 
             <Button
@@ -150,6 +169,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="110dp"
                 android:layout_weight="1"
+                android:onClick="BtnClicked"
+
                 android:layout_margin="5dp"
                 android:backgroundTint="#827370" />
 
@@ -158,6 +179,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="110dp"
                 android:layout_weight="1"
+                android:onClick="BtnClicked"
                 android:layout_margin="5dp"
                 android:backgroundTint="#827370" />
         </LinearLayout>
@@ -167,7 +189,13 @@
         android:layout_height="60dp"
         android:backgroundTint="#F83711"
         android:text="Reset"
+        android:onClick="reset"
         android:layout_alignParentBottom="true"
         android:textSize="15sp"/>
+
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/viewKonfetti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </RelativeLayout>
 
